@@ -1,0 +1,8 @@
+<Layouts.app flash={@flash}>
+  <.header>
+    Congratulations, you have been approved for credit up to $<%= @credit_limit %> USD
+    <:subtitle>Please provide your email address to receive detalied offer</:subtitle>
+  </.header>
+
+  <.contact_form changeset={@changeset} action={~p"/offer/send"} />
+</Layouts.app>

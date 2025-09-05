@@ -1,0 +1,14 @@
+---
+services:
+  webapp:
+    container_name: cred-it-web
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "4000:4000"
+    volumes:
+      - .:/usr/src/app
+    command: >
+      sh -c "mix deps.get &&
+             elixir --no-halt -S mix phx.server"

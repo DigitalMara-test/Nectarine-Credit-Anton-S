@@ -1,0 +1,12 @@
+---
+services:
+  webapp:
+    container_name: cred-it-web
+    build:
+      context: ./
+      dockerfile: Dockerfile.dev
+    ports:
+      - "4000:4000"
+    volumes:
+      - .:/usr/src/app
+    command: tail -f /dev/null

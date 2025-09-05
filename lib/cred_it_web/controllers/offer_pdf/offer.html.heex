@@ -1,0 +1,20 @@
+<h1>CredIt Offer</h1>
+
+<h2>Approved Credit Limit</h2>
+<p><strong>$<%= @credit_limit %> USD</strong></p>
+
+<h2>Risk Assessment</h2>
+<p><strong>Risk Score:</strong> <%= @score %></p>
+
+<h3>Survey Answers</h3>
+<ul>
+    <li>Currently have a paying job: <%= if @survey.has_job_now, do: "Yes", else: "No" %></li>
+    <li>Had a paying job during past 12 months: <%= if @survey.has_job_year, do: "Yes", else: "No" %></li>
+    <li>Own a home: <%= if @survey.has_home, do: "Yes", else: "No" %></li>
+    <li>Own a car: <%= if @survey.has_car, do: "Yes", else: "No" %></li>
+    <li>Have additional source of income: <%= if @survey.has_side_income, do: "Yes", else: "No" %></li>
+</ul>
+
+<h2>Financial Information</h2>
+<p><strong>Monthly Income:</strong> $<%= @offer.monthly_income %> USD</p>
+<p><strong>Monthly Expenses:</strong> $<%= @offer.monthly_expenses %> USD</p>

@@ -1,0 +1,7 @@
+<.form :let={f} for={@changeset} action={@action}>
+  <.input field={f[:monthly_income]} type="number" label="What is your total monthly income from all income sources? (USD)" placeholder="Enter amount in USD" required min="0" max="1000000000000" step="0.01" />
+  <.input field={f[:monthly_expenses]} type="number" label="What are your total monthly expenses? (USD)" placeholder="Enter amount in USD" required min="0" max="1000000000000" step="0.01" />
+  <footer>
+    <.button variant="primary">Submit</.button>
+  </footer>
+</.form>

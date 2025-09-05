@@ -1,0 +1,8 @@
+<Layouts.app flash={@flash}>
+  <.header>
+    Additional information required
+    <:subtitle>You qualify for credit, but we need a little more details to give you a final offer</:subtitle>
+  </.header>
+
+  <.offer_form changeset={@changeset} action={~p"/offer"} />
+</Layouts.app>

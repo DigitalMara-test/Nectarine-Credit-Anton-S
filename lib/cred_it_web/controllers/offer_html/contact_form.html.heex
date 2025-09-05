@@ -1,0 +1,6 @@
+<.form :let={f} for={@changeset} action={@action}>
+  <.input field={f[:email]} type="email" label="Email Address" placeholder="abc@example.com" required />
+  <footer>
+    <.button variant="primary">Send</.button>
+  </footer>
+</.form>

@@ -1,0 +1,10 @@
+<.form :let={fs} for={@changeset} action={@action}>
+  <.input field={fs[:has_job_now]} type="checkbox" label="I currently have a paying job" />
+  <.input field={fs[:has_job_year]} type="checkbox" label="During past 12 months, I consistently had a paying job" />
+  <.input field={fs[:has_home]} type="checkbox" label="I own a home" />
+  <.input field={fs[:has_car]} type="checkbox" label="I own a car" />
+  <.input field={fs[:has_side_income]} type="checkbox" label="I have an additional source of income" />
+  <footer>
+    <.button variant="primary">Submit</.button>
+  </footer>
+</.form>
